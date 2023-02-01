@@ -5,8 +5,10 @@ function projectLayout (project) {
     return (
         <div className='project-item'>
             <div className='project-preview'>
-                <div className='project-icon'><img src="" alt="" /></div>
-                <h3 className='project-title'>{project.title}</h3>
+                <div className='project-title-wrap'>
+                    <span className='project-icon'> i </span>
+                    <h3 className='project-title'>{project.title}</h3>
+                </div>
                 <div className='project-count'>
                     <p className='project-tasks-count'>{project.tasks.length}</p>
                 </div>
@@ -15,7 +17,7 @@ function projectLayout (project) {
     )
 }
 
-function Project(project) {
+function Project({project}) {
     return (
         <div className='project-wrap'>
             <div className='project-info'>
@@ -32,14 +34,12 @@ function Project(project) {
     )
 }
 
-function Projects(projectArr) {
+function Projects({projectArr}) {
     return (
         <div className='project-group'>
             {projectArr.map(project => projectLayout(project))}
         </div>
     )
 }
-
-
 
 export {Projects, Project}

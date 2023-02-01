@@ -1,13 +1,145 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-weight: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+}
+
+.aside {
+  width: 20%;
+  max-width: 300px;
+  background-color: #FAFAFA;
+  padding: 10px;
+}
+
+.project-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  margin: 5px 0;
+  padding: 5px 0;
+}
+
+.project-title-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.project-title{
+  font-weight: 500;
+}
+
+.project-icon {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #067CFF;
+  margin-right: 5px;
+}
+
+.project-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFEFEF;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.project-tasks-count{ 
+  font-weight: 600;
+}
+
+.main {
+  width: 60%;
+  padding: 10px;
+}
+
+/* this style is for the projest item displayed in the main section */
+.project-wrap {
+
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.project-info .left {
+  text-align: left;
+}
+
+.project-info .project-title {
+  font-size: 1.6rem;
+}
+
+.project-info .project-month {
+  font-size: 1.4rem;
+  color: #afafb1;
+  font-weight: 600;
+}
+
+.new-task-btn button{
+  padding: 5px 10px;
+  border: 1px solid rgb(6, 122, 255);
+  border-radius: 15px;
+  background-color: rgba(6, 122, 255, 0.15);
+  color: #067CFF;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* styling for task items */
+
+.task-item {
+
+}
+
+.task-preview,
+.task-preview-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-info {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.task-data {
+  display: flex;
+}
+
+.task-data > *{
+  margin-right: 10px;
+}
+
+.task-data > * ::after{
+  content: '.';
+}
+
+.sidebar {
+  width: 20%;
+  max-width: 300px;
+  background-color: aqua;
+}
+
+.hide {
+  display: none;
 }
