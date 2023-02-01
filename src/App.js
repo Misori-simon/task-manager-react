@@ -120,9 +120,9 @@ function App() {
       <div className='main'>
         <Project project={projects[0]} />
       </div>
-      <sidebar className='sidebar'>
+      <aside className='sidebar'>
         
-      </sidebar>
+      </aside>
     </div>
   );
 }

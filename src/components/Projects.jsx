@@ -1,9 +1,9 @@
 import React from 'react'
 import Tasks from './Tasks'
 
-function projectLayout (project) {
+function projectLayout (project, index) {
     return (
-        <div className='project-item'>
+        <div className='project-item' key={index}>
             <div className='project-preview'>
                 <div className='project-title-wrap'>
                     <span className='project-icon'> i </span>
@@ -37,7 +37,7 @@ function Project({project}) {
 function Projects({projectArr}) {
     return (
         <div className='project-group'>
-            {projectArr.map(project => projectLayout(project))}
+            {projectArr.map((project, index) => projectLayout(project, index))}
         </div>
     )
 }
